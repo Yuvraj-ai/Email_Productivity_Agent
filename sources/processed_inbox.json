@@ -1,0 +1,202 @@
+[
+    {
+        "id": "1",
+        "message_id": "message1@example.com",
+        "sender": "john.smith@example.com",
+        "sender_name": "John Smith",
+        "recipients": [
+            "user@example.com"
+        ],
+        "subject": "Meeting Kick-off Q4 Project",
+        "body": "Hi,\n\nI'd like to schedule a meeting to kick off the Q4 project. This is a critical initiative that needs your input from the start.\n\nProposed Times:\n- Tuesday, Nov 19, 2-3 PM EST\n- Wednesday, Nov 20, 10-11 AM EST\n- Thursday, Nov 21, 3-4 PM EST\n\nExpected Duration: 1 hour\nAttendees: Project team, stakeholders, and technical leads\nLocation: Conference Room B or via Zoom\n\nPlease confirm your availability and let me know any agenda items you'd like to discuss.\n\nBest regards,\nJohn Smith\nProject Manager",
+        "timestamp": "2023-10-27T10:00:00Z",
+        "category": "Meeting Request",
+        "priority": "Important",
+        "is_spam": false,
+        "action_items": "Confirm availability and suggest agenda items.",
+        "summary": "Meeting request to kick off the Q4 project with proposed times and a request for availability and agenda items.",
+        "has_attachment": false,
+        "attachment_names": null
+    },
+    {
+        "id": "1",
+        "message_id": "message_1",
+        "sender": "noreply@techcrunch.com",
+        "sender_name": "TechCrunch Weekly",
+        "recipients": [
+            "user@example.com"
+        ],
+        "subject": "This week's digest covers the latest breakthroughs in artificial intelligence and machine learning.",
+        "body": "Hello,\n\nThis week's digest covers the latest breakthroughs in artificial intelligence and machine learning. Featured stories include:\n\n1. New transformer models achieve 99% accuracy on NLP tasks\n2. AWS announces quantum computing services\n3. Google DeepMind releases new robotics framework\n4. OpenAI updates GPT model training pipeline\n5. Meta releases open-source LLM model\n\nClick the links below to read the full articles:\n- Read story 1 [Link]\n- Read story 2 [Link]\n- Read story 3 [Link]\n\nStay updated with TechCrunch Weekly!\n\nUnsubscribe | Manage Preferences",
+        "timestamp": "2023-10-27T10:00:00Z",
+        "category": "Newsletter",
+        "priority": null,
+        "is_spam": false,
+        "action_items": "No action items.",
+        "summary": "This email is a weekly digest from TechCrunch covering AI and ML breakthroughs, including new models, quantum computing services, robotics frameworks, and LLM updates.",
+        "has_attachment": false,
+        "attachment_names": null
+    },
+    {
+        "id": "1",
+        "message_id": "message1@example.com",
+        "sender": "sarah.johnson@example.com",
+        "sender_name": "Sarah Johnson",
+        "recipients": [
+            "design.team@example.com"
+        ],
+        "subject": "Task Request: New UI Components for Analytics Dashboard",
+        "body": "Hi,\n\nI have a task request for the design team. We need to create new UI components for our analytics dashboard.\n\nRequirements:\n1. Design interactive charts (bar, line, pie)\n2. Create data tables with sorting/filtering\n3. Build responsive card components\n4. Design dark mode variants\n\nDeadline: December 2, 2024\nEstimated Hours: 40 hours\nPriority: High\n\nCould you please:\n1. Review the design brief attached\n2. Provide time estimates for each component\n3. Confirm you can take this on\n4. Schedule a kickoff meeting\n\nLooking forward to your response.\n\nBest regards,\nSarah Johnson\nProduct Designer",
+        "timestamp": "2024-11-15T10:00:00Z",
+        "category": "To-Do",
+        "priority": "High",
+        "is_spam": false,
+        "action_items": "1. Review the design brief attached\n2. Provide time estimates for each component\n3. Confirm you can take this on\n4. Schedule a kickoff meeting",
+        "summary": "Sarah Johnson is requesting the design team to create new UI components for an analytics dashboard, with a deadline of December 2, 2024.",
+        "has_attachment": true,
+        "attachment_names": [
+            "design_brief.pdf"
+        ]
+    },
+    {
+        "id": "1",
+        "message_id": "message_1",
+        "sender": "mike.chen@example.com",
+        "sender_name": "Mike Chen",
+        "recipients": [
+            "team@example.com"
+        ],
+        "subject": "Sprint 11 Status Update",
+        "body": "Here's our status update for Sprint 11 (Nov 11-22):\n\nCompleted Milestones:\n\u2713 Authentication system implementation (95% done)\n\u2713 Payment integration testing (100% done)\n\u2713 UI redesign approved by stakeholders (100% done)\n\u2713 Security audit passed\n\nCurrent Sprint Velocity: 48 story points\nBurndown: On track\n\nUpcoming Deliverables (Sprint 12):\n- Push notification system\n- Analytics dashboard\n- Performance optimization\n\nRisks & Blockers:\n- iOS certificate renewal pending (Action: IT team)\n- Backend API latency needs optimization\n\nMetrics:\n- Code coverage: 87% \u2191 (up from 82%)\n- Bug fix rate: 15 bugs fixed\n- Deployment success: 100%\n\nNext team sync: Thursday 2 PM\n\nRegards,\nMike Chen\nProject Manager",
+        "timestamp": "2023-11-22T14:00:00Z",
+        "category": "Project Update",
+        "priority": null,
+        "is_spam": false,
+        "action_items": "iOS certificate renewal pending (Action: IT team)",
+        "summary": "Status update for Sprint 11, including completed milestones, current velocity, upcoming deliverables, risks, and metrics.",
+        "has_attachment": false,
+        "attachment_names": null
+    },
+    {
+        "id": "1",
+        "message_id": "message_1",
+        "sender": "michael.chen@example.com",
+        "sender_name": "Michael Chen",
+        "recipients": [
+            "user@example.com"
+        ],
+        "subject": "Q4 Budget Allocation Approval",
+        "body": "Hi,\n\nI need your sign-off on the Q4 budget allocation before we can proceed with departmental spending approvals. The total budget is $2.5M and has been reviewed by the finance team.\n\nKey points:\n- Marketing: $500K\n- Engineering: $1.2M\n- Operations: $800K\n\nPlease review the attached detailed breakdown and confirm your approval by end of day Friday, November 22.\n\nIf you have any questions or concerns, please schedule a call with my assistant.\n\nRegards,\nMichael Chen\nChief Financial Officer",
+        "timestamp": "2023-11-20T10:00:00Z",
+        "category": "To-Do",
+        "priority": "Important",
+        "is_spam": false,
+        "action_items": "Please review the attached detailed breakdown and confirm your approval by end of day Friday, November 22.",
+        "summary": "Michael Chen is requesting approval for the Q4 budget allocation of $2.5M, with specific amounts for Marketing, Engineering, and Operations. The detailed breakdown is attached, and approval is needed by Friday, November 22.",
+        "has_attachment": true,
+        "attachment_names": [
+            "Q4_budget_breakdown.pdf"
+        ]
+    },
+    {
+        "id": "1",
+        "message_id": "message_1",
+        "sender": "lisa.martinez@example.com",
+        "sender_name": "Lisa Martinez",
+        "recipients": [
+            "recipient@example.com"
+        ],
+        "subject": "Q4 Marketing Campaign Content Review",
+        "body": "Hi,\n\nI'm requesting your assistance with reviewing and approving the content for our Q4 marketing campaign.\n\nTask Details:\nProject: Q4 Holiday Marketing Campaign\nDeadline: November 22, 2024 at 5 PM EST\nEstimated Time: 2-3 hours\n\nWhat Needs Review:\n1. Email templates (3 versions)\n2. Landing page copy\n3. Social media posts (12 variations)\n4. Ad copy for Google and Facebook\n\nApproval Required From:\n- You (Content Lead)\n- Marketing Director (Maria)\n- Legal Team (to be sent after your approval)\n\nPlease:\n1. Download the content pack from the link below\n2. Review all materials for tone, accuracy, and brand alignment\n3. Provide feedback/approvals in the shared document\n4. Flag any legal concerns\n5. Confirm final approval by EOD Friday\n\nContent Link: [Link]\nShared Document: [Link]\n\nThank you for your quick turnaround on this!\n\nBest,\nLisa Martinez\nMarketing Manager",
+        "timestamp": "2024-10-27T10:00:00Z",
+        "category": "To-Do",
+        "priority": "Important",
+        "is_spam": false,
+        "action_items": "1. Download the content pack from the link.\n2. Review all materials for tone, accuracy, and brand alignment.\n3. Provide feedback/approvals in the shared document.\n4. Flag any legal concerns.\n5. Confirm final approval by EOD Friday.",
+        "summary": "Lisa Martinez is requesting assistance with reviewing and approving content for the Q4 marketing campaign, including email templates, landing page copy, social media posts, and ad copy. The deadline for review is November 22, 2024, at 5 PM EST. The sender asks the recipient to download the content pack, review materials, provide feedback, flag legal concerns, and confirm final approval by EOD Friday.",
+        "has_attachment": false,
+        "attachment_names": null
+    },
+    {
+        "id": "12345",
+        "message_id": "<CAJ+y4=1234567890@mail.gmail.com>",
+        "sender": "sarah.cohen@example.com",
+        "sender_name": "Sarah Cohen",
+        "recipients": [
+            "user@example.com"
+        ],
+        "subject": "Technical Interview Panel Scheduling - Senior Backend Engineer",
+        "body": "Hi,\n\nI hope this email finds you well. I'm reaching out to schedule a technical interview panel meeting for a senior backend engineer candidate.\n\nCandidate: James Peterson\nPosition: Senior Backend Engineer\nExperience: 8 years\n\nInterview Details:\n- Format: Technical assessment (system design, coding problems)\n- Duration: 60 minutes\n- Interviewers Needed: You, Tom (Architecture Lead), and Kumar (Database Lead)\n\nProposed Time Slots (all times EST):\n- Option A: Tuesday, Nov 19, 10:00 AM - 11:00 AM\n- Option B: Wednesday, Nov 20, 2:00 PM - 3:00 PM\n- Option C: Thursday, Nov 21, 11:00 AM - 12:00 PM\n\nPlease confirm:\n1. Your availability for one of the above slots\n2. Any specific topics you'd like the candidate to cover\n3. Whether you can join via Zoom or in-person (Conference Room A)\n\nCandidate Resume: [Attached]\nInterview Guidelines: [Link]\n\nPlease reply by end of day tomorrow.\n\nThanks,\nSarah Cohen\nRecruiter",
+        "timestamp": "2023-11-15T10:00:00Z",
+        "category": "Meeting Request",
+        "priority": "Important",
+        "is_spam": false,
+        "action_items": "1. Confirm availability for one of the proposed interview slots.\n2. Specify any particular topics to be covered during the interview.\n3. Indicate preference for Zoom or in-person interview.\n4. Reply by end of day tomorrow.",
+        "summary": "Sarah Cohen is scheduling a technical interview panel for James Peterson, a Senior Backend Engineer candidate. She needs confirmation of availability for proposed time slots and preferred interview format (Zoom/in-person).",
+        "has_attachment": true,
+        "attachment_names": [
+            "James Peterson - Resume.pdf"
+        ]
+    },
+    {
+        "id": "1",
+        "message_id": "12345",
+        "sender": "noreply@bank.com",
+        "sender_name": "Your Bank",
+        "recipients": [
+            "user@example.com"
+        ],
+        "subject": "ALERT! Your Account Will Be Closed!",
+        "body": "ALERT! ALERT! ALERT!\n\nYour bank account will be CLOSED in 24 hours if you don't verify it immediately!\n\nCLICK HERE TO VERIFY: [SUSPICIOUS LINK]\n\nPlease confirm:\n- Account number\n- Social security number\n- Password\n- Credit card information\n\nACT NOW - LIMITED TIME!!!\n\nYour bank would NEVER contact you this way, but please click the link anyway.\n\nDo not call your bank!\nDo not ignore this message!",
+        "timestamp": "2023-10-27T10:00:00Z",
+        "category": "Spam",
+        "priority": null,
+        "is_spam": true,
+        "action_items": null,
+        "summary": "Urgent alert about bank account closure requiring immediate verification.",
+        "has_attachment": false,
+        "attachment_names": null
+    },
+    {
+        "id": "1",
+        "message_id": "msg_1",
+        "sender": "jennifer.blake@example.com",
+        "sender_name": "Jennifer Blake",
+        "recipients": [
+            "user@example.com"
+        ],
+        "subject": "Website Redesign Project - Phase 2 Completion & Phase 3 Kickoff",
+        "body": "I'm pleased to report that we've successfully completed Phase 2 of the website redesign project. Here's the detailed status update:\n\n=== COMPLETED PHASE 2 ===\nMilestones Achieved:\n\u2713 Homepage redesign (100% complete, approved by stakeholders)\n\u2713 Product pages layout (100% complete, testing in progress)\n\u2713 Checkout flow optimization (95% complete, final QA this week)\n\u2713 Performance improvements (30% faster load time achieved)\n\nMetrics:\n- Pages redesigned: 24\n- Performance gain: 30% average\n- User testing score: 8.2/10\n- Bug fixes applied: 18\n\n=== UPCOMING PHASE 3 (Starting Nov 20) ===\nDeliverables:\n1. Mobile optimization (all pages)\n2. Accessibility audit and fixes (WCAG 2.1 AA compliance)\n3. Integration testing with backend systems\n4. User acceptance testing (UAT)\n\nTimeline:\n- Phase 3 Duration: 3 weeks (Nov 20 - Dec 10)\n- Soft launch: Dec 11\n- Full launch: Dec 18\n\n=== BUDGET & RESOURCE STATUS ===\nBudget Used: $85K of $100K (85%)\nTeam: All allocated resources on track\nRisks: None currently identified\n\n=== KEY DATES ===\n- Phase 3 kickoff: Tuesday, Nov 20, 10 AM EST\n- Mid-phase review: Nov 27\n- Final review before launch: Dec 10\n\nNext Steps:\nPlease review attached Phase 3 requirements and prepare team for kickoff meeting.\n\nQuestionnaire for team:\n1. Any blockers or concerns?\n2. Resource availability confirmed for Phase 3?\n3. UAT environment ready?\n\nPlease reply by EOD tomorrow.\n\nBest regards,\nJennifer Blake\nProject Manager",
+        "timestamp": "2023-11-15T10:00:00Z",
+        "category": "Project Update",
+        "priority": "Important",
+        "is_spam": false,
+        "action_items": "Please review attached Phase 3 requirements and prepare team for kickoff meeting.\n\nQuestionnaire for team:\n1. Any blockers or concerns?\n2. Resource availability confirmed for Phase 3?\n3. UAT environment ready?\n\nPlease reply by EOD tomorrow.",
+        "summary": "Project update on website redesign: Phase 2 completed successfully, with details on milestones, metrics, and upcoming Phase 3 deliverables and timeline. Includes budget status and key dates.",
+        "has_attachment": true,
+        "attachment_names": [
+            "Phase 3 requirements"
+        ]
+    },
+    {
+        "id": "1",
+        "message_id": "message_1",
+        "sender": "cto@example.com",
+        "sender_name": "CTO",
+        "recipients": [
+            "user@example.com"
+        ],
+        "subject": "Technology Roadmap 2025 - Input Required",
+        "body": "Hi,\n\nI've prepared our technology roadmap for 2025 and would like your input and approval before we share it with the board.\n\nKey Initiatives:\n1. Cloud Migration (Q1-Q2): Move legacy systems to AWS\n2. Microservices Architecture (Q2-Q3): Refactor monolith\n3. AI Integration (Q3-Q4): Implement ML features\n4. Security Enhancement (Ongoing): Zero-trust architecture\n\nEstimated Budget: $3.2M\nExpected ROI: 35% efficiency gain\n\nPlease review the attached document and provide feedback by November 21.\n\nI'd also like to schedule a meeting to discuss:\n- Technical feasibility\n- Resource requirements\n- Risk assessment\n- Timeline adjustments\n\nLooking forward to your thoughts.\n\nBest,\nCTO",
+        "timestamp": "2023-11-15T10:00:00Z",
+        "category": "To-Do",
+        "priority": "Important",
+        "is_spam": false,
+        "action_items": "Please review the attached document and provide feedback by November 21. Schedule a meeting to discuss technical feasibility, resource requirements, risk assessment, and timeline adjustments.",
+        "summary": "The CTO has prepared the 2025 technology roadmap and is requesting input and approval. Key initiatives include cloud migration, microservices, AI integration, and security enhancements, with an estimated budget and ROI. Feedback is requested by November 21, and a meeting to discuss feasibility, resources, risks, and timelines is also proposed.",
+        "has_attachment": true,
+        "attachment_names": [
+            "technology_roadmap_2025.pdf"
+        ]
+    }
+]

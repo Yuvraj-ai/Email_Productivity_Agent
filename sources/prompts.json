@@ -1,0 +1,7 @@
+{
+  "categorization_prompt": "Categorize the following email into one of these categories: Important, Newsletter, Spam, To-Do. If it contains a request that requires the user to perform some action, classify it as To-Do. Respond only with the category name.",
+
+  "action_item_prompt": "Extract all actionable tasks from the email. A task is something that the receiver must do. Respond in JSON format:\n{\n  \"tasks\": [\"task1\", \"task2\"],\n  \"deadline\": \"If mentioned, extract it. Otherwise use null.\"\n}",
+
+  "auto_reply_prompt": "Draft a professional and polite reply to this email. Keep the response concise and include a greeting, a direct answer, and a closing line. Do not send the email—just create a draft. Maintain a friendly but formal tone."
+}
