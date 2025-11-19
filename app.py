@@ -4,6 +4,8 @@ import pandas as pd
 import os
 from backend.categorizer import categorizer
 from backend.agent import get_agent_response
+import uuid
+
 # Set page configuration
 st.set_page_config(page_title="Email Productivity Agent", layout="wide")
 
@@ -15,6 +17,7 @@ if 'page' not in st.session_state:
 INBOX_PATH = 'sources/inbox.json'
 PROCESSED_PATH = 'sources/processed_inbox.json'
 PROMPTS_PATH = 'sources/prompts.json'
+DRAFTS_PATH = 'sources/drafts.json'
 
 def load_data(path):
     if os.path.exists(path):
@@ -46,6 +49,10 @@ with st.sidebar:
     
     if st.button("Email Agent"):
         st.session_state.page = "Email Agent"
+        st.rerun()
+
+    if st.button("Draft Agent"):
+        st.session_state.page = "Draft Agent"
         st.rerun()
         
     st.divider()
@@ -246,3 +253,121 @@ elif st.session_state.page == "Email Agent":
                     st.session_state.messages.append({"role": "assistant", "content": response})
                 except Exception as e:
                     st.error(f"Error: {e}")
+
+elif st.session_state.page == "Draft Agent":
+    st.title("📝 Draft Generation Agent")
+    
+    # Load Data
+    processed_data = load_data(PROCESSED_PATH)
+    prompts_data = load_data(PROMPTS_PATH)
+    drafts_data = load_data(DRAFTS_PATH) or []
+    
+    emails_list = []
+    if processed_data:
+        emails_list = processed_data.get("emails", []) if isinstance(processed_data, dict) else processed_data
+
+    tab1, tab2 = st.tabs(["✨ Create Draft", "📂 Saved Drafts"])
+    
+    with tab1:
+        st.subheader("Generate New Draft")
+        
+        col1, col2 = st.columns([1, 2])
+        
+        with col1:
+            draft_type = st.radio("Draft Type", ["New Email", "Reply to Email"])
+            
+            selected_email_context = None
+            if draft_type == "Reply to Email":
+                email_options = [f"{i+1}. {e.get('subject')} | {e.get('sender')}" for i, e in enumerate(emails_list)]
+                selected_option = st.selectbox("Select Email to Reply to:", email_options)
+                if selected_option:
+                    index = int(selected_option.split('.')[0]) - 1
+                    selected_email_context = emails_list[index]
+                    st.caption(f"Replying to: {selected_email_context.get('subject')}")
+        
+        with col2:
+            instructions = st.text_area("Instructions for Agent", placeholder="e.g., 'Polite refusal', 'Ask for meeting next Tuesday', 'Accept the offer'")
+            
+            if st.button("Generate Draft"):
+                if not instructions:
+                    st.warning("Please provide instructions.")
+                else:
+                    with st.spinner("Drafting..."):
+                        # Construct prompt for the agent
+                        prompt_text = f"Draft a {draft_type}."
+                        if draft_type == "Reply to Email":
+                            prompt_text += " This is a reply."
+                        prompt_text += f"\nInstructions: {instructions}"
+                        prompt_text += "\n\nIMPORTANT: Return the draft in the following format:\nSubject: [Subject Line]\n\n[Body Text]"
+                        
+                        try:
+                            response = get_agent_response(
+                                user_query=prompt_text,
+                                chat_history=[],
+                                selected_email=selected_email_context,
+                                inbox=emails_list,
+                                prompts=prompts_data if prompts_data else {}
+                            )
+                            
+                            # Simple parsing (robustness can be improved)
+                            subject = "Draft Subject"
+                            body = response
+                            
+                            if "Subject:" in response:
+                                parts = response.split("\n", 1)
+                                if len(parts) > 0:
+                                    subject_line = parts[0]
+                                    if subject_line.startswith("Subject:"):
+                                        subject = subject_line.replace("Subject:", "").strip()
+                                        body = parts[1].strip() if len(parts) > 1 else ""
+                            
+                            st.session_state.generated_subject = subject
+                            st.session_state.generated_body = body
+                            st.success("Draft Generated!")
+                            
+                        except Exception as e:
+                            st.error(f"Error generating draft: {e}")
+
+        st.divider()
+        st.subheader("Editor")
+        
+        # Editor State
+        if 'generated_subject' not in st.session_state:
+            st.session_state.generated_subject = ""
+        if 'generated_body' not in st.session_state:
+            st.session_state.generated_body = ""
+            
+        with st.form("draft_editor"):
+            draft_subject = st.text_input("Subject", value=st.session_state.generated_subject)
+            draft_body = st.text_area("Body", value=st.session_state.generated_body, height=300)
+            
+            if st.form_submit_button("Save Draft"):
+                new_draft = {
+                    "id": str(uuid.uuid4()),
+                    "type": draft_type,
+                    "related_email_id": selected_email_context.get('id') if selected_email_context else None,
+                    "subject": draft_subject,
+                    "body": draft_body,
+                    "status": "saved"
+                }
+                drafts_data.append(new_draft)
+                if save_data(DRAFTS_PATH, drafts_data):
+                    st.success("Draft saved successfully!")
+                    # Clear state
+                    st.session_state.generated_subject = ""
+                    st.session_state.generated_body = ""
+                    st.rerun()
+
+    with tab2:
+        st.subheader("Saved Drafts")
+        if drafts_data:
+            for draft in drafts_data:
+                with st.expander(f"{draft.get('subject', 'No Subject')} ({draft.get('status')})"):
+                    st.write(f"**Type:** {draft.get('type')}")
+                    st.text_area("Body", draft.get('body'), height=200, key=f"view_{draft['id']}")
+                    if st.button("Delete", key=f"del_{draft['id']}"):
+                        drafts_data.remove(draft)
+                        save_data(DRAFTS_PATH, drafts_data)
+                        st.rerun()
+        else:
+            st.info("No saved drafts.")

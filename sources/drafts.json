@@ -1,0 +1,18 @@
+[
+    {
+        "id": "2111c24d-36bb-44d0-988a-7e63d3d345b8",
+        "type": "Reply to Email",
+        "related_email_id": "1",
+        "subject": "Re: Sprint 11 Status Update",
+        "body": "Hi Mike,\n\nThanks for the comprehensive update on Sprint 11. It's good to see the progress and that the team is on track.\n\nBest regards,\n[Your Name]",
+        "status": "saved"
+    },
+    {
+        "id": "d6916a73-d4ca-4994-aeaf-86568f892802",
+        "type": "Reply to Email",
+        "related_email_id": "1",
+        "subject": "Re: Q4 Marketing Campaign Content Review",
+        "body": "Hi Lisa,\n\nThank you for sending over the Q4 marketing campaign content for review. I will prioritize this and provide my feedback and approval by the deadline.\n\nBest regards,",
+        "status": "saved"
+    }
+]
