@@ -1,6 +1,7 @@
 import json
 from backend.structure import Email
 
+#pushes extracted and processed data into processed inbox json 
 
 def pushIt(emails : list):
     data = list()

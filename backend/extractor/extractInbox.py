@@ -1,6 +1,6 @@
 
 import json
-
+#extracts inbox data from json
 def extract():
     InboxFile = "sources/inbox.json"
     with open(InboxFile,"r") as f:

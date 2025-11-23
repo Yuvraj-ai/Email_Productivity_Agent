@@ -1,5 +1,6 @@
 from dotenv import load_dotenv
 load_dotenv()
+
 from langchain.tools import tool
 from typing import TypedDict, Annotated, List, Dict, Any
 import operator
@@ -61,6 +62,8 @@ def call_model(state: AgentState):
     system_text = """You are an intelligent Email Productivity Agent designed to help the user manage their inbox.
 You can summarize emails, extract action items, draft replies, and answer general questions about the inbox.
 """
+    #manipulate prompt based on the selection made by the user
+    
     if selected_email:
         system_text += f"\n\n--- CURRENTLY SELECTED EMAIL ---\n"
         system_text += f"From: {selected_email.get('sender')} ({selected_email.get('sender_name')})\n"
@@ -94,7 +97,8 @@ You can summarize emails, extract action items, draft replies, and answer genera
 
 def get_agent_response(user_query: str, chat_history: List[Dict], selected_email: Dict, inbox: List, prompts: Dict):
     """
-    Entry point for the Streamlit app to call the agent.
+    Entry point for the Streamlit app to call the agent.'
+    Making the info grabbed be streamlit agent ready.
     """
     lc_messages = []
     for msg in chat_history:

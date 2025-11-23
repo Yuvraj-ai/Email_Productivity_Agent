@@ -40,7 +40,7 @@ def save_data(path, data):
         st.error(f"Error saving data: {e}")
         return False
 
-# --- Sidebar: Navigation & Prompt Settings ---
+# Sidebar: Navigation & Prompt Settings
 with st.sidebar:
     st.header("Navigation")
     if st.button("Home"):
@@ -58,7 +58,7 @@ with st.sidebar:
     st.divider()
 
     st.header("⚙️ Prompt Settings")
-    # Using an expander as requested for "expandable contractable side"
+    # Using an expander for "expandable contractable side"
     # although the sidebar itself is collapsible, having an expander inside is also good organization.
     with st.expander("Edit Prompts", expanded=False):
         prompts_data = load_data(PROMPTS_PATH)
@@ -80,7 +80,7 @@ with st.sidebar:
 if st.session_state.page == "Home":
     st.title("📧 Email Productivity Agent")
 
-    # --- Section 1: Load Raw Emails ---
+    # Section 1: Load Raw Emails
     st.header("📥 Inbox")
     if st.button("Load Emails"):
         data = load_data(INBOX_PATH)
@@ -102,7 +102,7 @@ if st.session_state.page == "Home":
         else:
             st.info("Inbox is empty.")
 
-    # --- Section 2: Processed Emails ---
+    # Section 2: Processed Emails
     st.header("🏷️ Categorized & Processed Emails")
 
     # Initialize session state for processed data visibility
@@ -177,7 +177,7 @@ if st.session_state.page == "Home":
         else:
             st.info("No processed emails found.")
 
-        # --- Section 3: Action Items List ---
+        # Section 3: Action Items List
         if isinstance(emails_list, list) and len(emails_list) > 0:
             st.divider()
             st.header("📝 Action Items List")
@@ -208,7 +208,7 @@ elif st.session_state.page == "Email Agent":
     if processed_data:
         emails_list = processed_data.get("emails", []) if isinstance(processed_data, dict) else processed_data
 
-    # --- Sidebar: Email Selection ---
+    # Sidebar: Email Selection
     with st.sidebar:
         st.divider()
         st.subheader("Select Context")
@@ -222,7 +222,7 @@ elif st.session_state.page == "Email Agent":
             selected_email = emails_list[index]
             st.info(f"**Focus:** {selected_email.get('subject')}")
 
-    # --- Chat Interface ---
+    # Chat Interface
     if "messages" not in st.session_state:
         st.session_state.messages = []
 
